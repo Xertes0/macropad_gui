@@ -1,0 +1,48 @@
+.toolbar{
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.toolbarBut{
+    float: left;
+    position: absolute;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    right: -2.5%;
+    font-size: 250%;
+    background: transparent;
+    border: none !important;
+    color: #757575;
+    font-weight: bold;
+}
+
+.toolbar hr{
+    margin-right: -5%;
+    margin-left: -5%;
+}
+
+#nav{
+    float: left;
+    margin-bottom: 2.5%;
+    text-align: right;
+
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    right: 100px;
+}
+
+#nav input{
+    font-size: 110%;
+}
+
+#nav a{
+    color: inherit;
+    text-decoration: none;
+    font-size: 110%;
+}

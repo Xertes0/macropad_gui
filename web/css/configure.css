@@ -1,0 +1,21 @@
+body{
+    background-color: #101010;
+    color: #F0F0F0;
+    font-family: 'Roboto', sans-serif;
+
+    margin: 5%;
+    margin-top: 0px;
+    text-align: center;
+}
+
+label, select, input{
+    margin: 5px;
+}
+
+#footer input{
+    background: transparent;
+    border: none !important;
+    color: inherit;
+    font-size: 125%;
+    font-weight: bold;
+}

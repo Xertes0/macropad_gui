@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacroPad</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <!-- //Google fonts -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/toolbar.css">
+</head>
+<body>
+    <div class="toolbar">
+        <h1 style="float: left;">MacroPad</h1>
+        <div id="nav">
+            <a href="#macro"><h4 style="float: left;">Macro&nbsp&nbsp&nbsp&nbsp</h4></a>
+            <a href="#settings"><h4 style="float: left;">Ustawienia</h4></a>
+        </div>
+        <input class="toolbarBut" type="button" onclick="toolbarClose()" value="X">
+        <hr style="clear: both;">
+    </div>
+
+    <div id="settings" class="tab">
+        <input type="text">
+    </div>
+    <!-- Default tab must be placed last in order of the css to work -->
+    <div id="macro" class="tab">
+        <div id="model">
+            <img src="./img/model.svg" alt="">
+            <input id="but1" type="button" onclick="buttPressed(1)" value="1">
+            <input id="but2" type="button" onclick="buttPressed(2)" value="2">
+            <input id="but3" type="button" onclick="buttPressed(3)" value="3">
+            <input id="but4" type="button" onclick="buttPressed(4)" value="4">
+            <input id="but5" type="button" onclick="buttPressed(5)" value="5">
+            <input id="but6" type="button" onclick="buttPressed(6)" value="6">
+            <input id="but7" type="button" onclick="buttPressed(7)" value="7">
+            <input id="but8" type="button" onclick="buttPressed(8)" value="8">
+            <input id="but9" type="button" onclick="buttPressed(9)" value="9">
+            <input id="but0" type="button" onclick="buttPressed(0)" value="0">
+        </div>
+        <div id="macroDesc">
+            <h3>Wciśnij na klawisz aby<br>skonfigurować jego działanie</h3>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

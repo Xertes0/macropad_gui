@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfiguracja</title>
+    <link rel="stylesheet" href="css/configure.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Konfiguracja przycisku <span id="butId"></span></h1>
+    </div>
+    <hr>
+    <h2>Naciśnięcie</h2>
+
+    <label for="cAction">Akcja:</label><br>
+    <select name="cAction" id="cAction">
+        <option value="text">Wpisanie tekstu</option>
+        <option value="sequence">Sekwencja klawiszy</option>
+        <option value="run">Włączenie programu</option>
+    </select><br>
+    <label for="cData">Dane:</label><br>
+    <input name="cData" id="cData" type="text">
+
+    <br><br><hr>
+    <h2>Przytrzymanie</h2>
+
+    <label for="sAction">Akcja:</label><br>
+    <select name="sAction" id="sAction">
+        <option value="text">Wpisanie tekstu</option>
+        <option value="sequence">Sekwencja klawiszy</option>
+        <option value="run">Włączenie programu</option>
+    </select><br>
+    <label for="sData">Dane:</label><br>
+    <input name="sData" id="sData" type="text">
+
+    <br><br><hr><br>
+
+    <div id="footer">
+        <input type="button" onclick="butSave()" value="Zastosuj">
+        <input type="button" onclick="butClose()" value="Anuluj">
+    </div>
+
+    <script src="js/configure.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    background-color: #101010;
+    color: #F0F0F0;
+    font-family: 'Roboto', sans-serif;
+
+    margin: 5%;
+    margin-top: 0px;
+}
+
+#macroDesc{
+    position: absolute;
+    left: 375px;
+}
+
+.tab, .tab:target ~ #macro{
+    display: none;
+}
+
+#macro, .tab:target{
+    display: block;
+}

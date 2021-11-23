@@ -1,0 +1,85 @@
+#model{
+    position: relative;
+}
+
+#model img{
+    position: absolute;
+}
+
+#model input{
+    position: absolute;
+    background: transparent;
+    border: none !important;
+    color: #F0F0F0;
+    font-size: 110%;
+}
+
+#model #but1{
+    top: 47px;
+    left: 44px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but2{
+    top: 47px;
+    left: 115px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but3{
+    top: 47px;
+    left: 185px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but4{
+    top: 118px;
+    left: 44px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but5{
+    top: 118px;
+    left: 115px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but6{
+    top: 118px;
+    left: 185px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but7{
+    top: 190px;
+    left: 44px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but8{
+    top: 190px;
+    left: 115px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but9{
+    top: 190px;
+    left: 185px;
+    width: 63px;
+    height: 55px;
+}
+
+#model #but0{
+    top: 260px;
+    left: 44px;
+    width: 134px;
+    height: 55px;
+}
