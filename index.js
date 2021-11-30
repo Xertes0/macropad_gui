@@ -1,5 +1,6 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const fs = require('fs');
+const {exec} = require('child_process');
 
 const CONF_PATH = require('os').homedir() + "/.config/macropad.json";
 
@@ -85,7 +86,7 @@ ipcMain.on('butConfigure', (event, arg) => {
 	let conf = get_conf();
 	conf_json = conf;
 	childWin.webContents.once('dom-ready', () => {
-		childWin.webContents.send('conf', arg, conf);
+		childWin.webContents.send('conf', arg, conf[arg]);
 	});
 })
 
@@ -95,4 +96,6 @@ ipcMain.on('confUpdate', (event, id, arg) => {
 	console.log(conf_json);
 	console.log(typeof conf_json);
 	fs.writeFile(CONF_PATH, JSON.stringify(conf_json) + '\n', ()=>{});
+
+	exec("pkill -RTMIN+10 pico_read");
 })

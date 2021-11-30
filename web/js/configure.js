@@ -17,20 +17,31 @@ function butSave(){
 			data:   sData,
 		}
 	});
+
+    ipcRenderer.ipcRenderer.send('childClose')
 }
 
 function butClose(){
     ipcRenderer.ipcRenderer.send('childClose')
 }
 
+function action_to_index(action) {
+	switch(action) {
+		case "text":     return 0;
+		case "sequence": return 1;
+		case "run":      return 2;
+	}
+}
+
 ipcRenderer.ipcRenderer.on('conf', (event, id, arg) => {
     console.log("conf")
+	console.log(arg);
     document.getElementById('butId').innerHTML = id;
 	console.log(id);
 
-    //document.getElementById('sAction').selectedIndex = arg[1][0]
-    //document.getElementById('hAction').selectedIndex = arg[1][1]
+    document.getElementById('cAction').selectedIndex = action_to_index(arg.click.action)
+    document.getElementById('sAction').selectedIndex = action_to_index(arg.secondary.action)
 
-    //document.getElementById('sData').value = arg[2]
-    //document.getElementById('hData').value = arg[3]
+    document.getElementById('cData').value = arg.click.data
+    document.getElementById('sData').value = arg.secondary.data
 })
