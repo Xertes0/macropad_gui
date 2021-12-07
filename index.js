@@ -22,6 +22,10 @@ function createWindow() {
     mainWin.setMenuBarVisibility(false)
 
     mainWin.loadFile('web/index.html')
+
+	mainWin.webContents.once('dom-ready', () => {
+		mainWin.webContents.send('conf', get_conf());
+    })
 }
 
 function close(){
@@ -98,4 +102,5 @@ ipcMain.on('confUpdate', (event, id, arg) => {
 	fs.writeFile(CONF_PATH, JSON.stringify(conf_json) + '\n', ()=>{});
 
 	exec("pkill -RTMIN+10 pico_read");
+    mainWin.webContents.send('conf', conf_json);
 })
