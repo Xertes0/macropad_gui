@@ -1,4 +1,4 @@
-const {app, BrowserWindow, ipcMain} = require('electron')
+const {app, BrowserWindow, ipcMain, shell} = require('electron')
 const fs = require('fs');
 const {exec} = require('child_process');
 
@@ -103,4 +103,8 @@ ipcMain.on('confUpdate', (event, id, arg) => {
 
 	exec("pkill -RTMIN+10 pico_read");
     mainWin.webContents.send('conf', conf_json);
+})
+
+ipcMain.on('openKeycodeList', (event) => {
+    shell.openExternal("https://gitlab.com/cunidev/gestures/-/wikis/xdotool-list-of-key-codes");
 })

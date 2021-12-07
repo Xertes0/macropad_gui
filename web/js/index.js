@@ -14,3 +14,7 @@ ipcRenderer.ipcRenderer.on('conf', (event, args) => {
             `Klikniecie: ${args[i].click.data}\nPrzytrzymanie: ${args[i].secondary.data}`;
     }
 })
+
+function openKeycodeList() {
+    ipcRenderer.ipcRenderer.send('openKeycodeList');
+}
